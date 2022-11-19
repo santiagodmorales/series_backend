@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "32101f59-5588-4b47-9c56-691ad8be85c3",
+		"name": "Series_backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21100410"
+	},
+	"item": [
+		{
+			"name": "signUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"prueba1@admin.com\",\r\n    \"password\":\"123456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"prueba1@admin.com\",\r\n    \"password\":\"123456\"\r\n}    ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSerie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"The Walking Dead\",\r\n    \"description\":\"La serie presenta un gran elenco como sobrevivientes de un apocalipsis zombi, tratando de mantenerse con vida bajo la amenaza casi constante de ataques de los zombis sin conciencia, coloquialmente conocidos como «caminantes». Sin embargo, con la caída de la humanidad, estos sobrevivientes también enfrentan conflictos con otros sobrevivientes que han formado grupos y comunidades con sus propios conjuntos de leyes y morales, lo que a menudo conduce a conflictos hostiles entre las comunidades humanas.\",\r\n    \"image\":\"https://image.tmdb.org/t/p/w185/hUblG1KZCTRpHc3wqqoU0DW98Q3.jpg\",\r\n    \"category\":\"Horror posapocalíptico\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/series",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"series"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateSerie",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"The Walking Dead(Prueba Update)\",\r\n    \"description\":\"La serie presenta un gran elenco como sobrevivientes de un apocalipsis zombi, tratando de mantenerse con vida bajo la amenaza casi constante de ataques de los zombis sin conciencia, coloquialmente conocidos como «caminantes». Sin embargo, con la caída de la humanidad, estos sobrevivientes también enfrentan conflictos con otros sobrevivientes que han formado grupos y comunidades con sus propios conjuntos de leyes y morales, lo que a menudo conduce a conflictos hostiles entre las comunidades humanas.\",\r\n    \"image\":\"https://image.tmdb.org/t/p/w185/hUblG1KZCTRpHc3wqqoU0DW98Q3.jpg\",\r\n    \"category\":\"Horror posapocalíptico\"\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/series/637944d6116d8b27abd678d7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"series",
+						"637944d6116d8b27abd678d7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSeries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/series",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"series"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSerieById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/series?id=637944d6116d8b27abd678d7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"series"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "637944d6116d8b27abd678d7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSerie",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/series/63795852f240ea44ce6a5c55",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"series",
+						"63795852f240ea44ce6a5c55"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createChapter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"The Walking Dead 1x2\",\r\n    \"description\":\"Rick accidentalmente hace que un grupo de supervivientes sean encontrados por los no muertos. Mientras tanto, el grupo emplea la violencia y se acusan entre ellos mientras Rick se enfrenta a un enemigo más peligroso que los zombis.\",\r\n    \"URL\":\"https://cuevana3.online/episode/the-walking-dead-1x2/\",\r\n    \"serieId\":\"637944d6116d8b27abd678d7\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/chapters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"chapters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateChapter",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"The Walking Dead 1x2 (pruebaUpdate)\",\r\n    \"description\":\"Rick accidentalmente hace que un grupo de supervivientes sean encontrados por los no muertos. Mientras tanto, el grupo emplea la violencia y se acusan entre ellos mientras Rick se enfrenta a un enemigo más peligroso que los zombis.\",\r\n    \"URL\":\"https://cuevana3.online/episode/the-walking-dead-1x2/\",\r\n    \"serieId\":\"637944d6116d8b27abd678d7\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/chapters/63795b1e254da0893e2fc20b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"chapters",
+						"63795b1e254da0893e2fc20b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getChapters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/chapters?serieId=637944d6116d8b27abd678d7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"chapters"
+					],
+					"query": [
+						{
+							"key": "serieId",
+							"value": "637944d6116d8b27abd678d7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteChapter",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/chapters/63795b1e254da0893e2fc20b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"chapters",
+						"63795b1e254da0893e2fc20b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createFavorite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/favorites?userId=6379405992cdbebc14d6ac12&serieId=637944d6116d8b27abd678d7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"favorites"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "6379405992cdbebc14d6ac12"
+						},
+						{
+							"key": "serieId",
+							"value": "637944d6116d8b27abd678d7"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
